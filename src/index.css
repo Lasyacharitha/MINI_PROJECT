@@ -1,0 +1,156 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    
+    /* Food-themed warm color palette */
+    --background: 30 40% 98%;
+    --foreground: 20 15% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 20 15% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 15%;
+    
+    /* Primary: Warm orange (appetizing, energetic) */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary: Deep red (rich, flavorful) */
+    --secondary: 10 80% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Muted: Soft cream */
+    --muted: 30 30% 92%;
+    --muted-foreground: 20 10% 45%;
+    
+    /* Accent: Golden yellow (highlights) */
+    --accent: 45 95% 88%;
+    --accent-foreground: 20 15% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 25 95% 53%;
+    
+    /* Status colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+    
+    /* Chart colors - food themed */
+    --chart-1: 25 95% 53%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 10 80% 50%;
+    --chart-4: 45 93% 47%;
+    --chart-5: 280 60% 50%;
+    
+    /* Sidebar */
+    --sidebar-background: 20 30% 96%;
+    --sidebar-foreground: 20 15% 15%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 30% 92%;
+    --sidebar-accent-foreground: 20 15% 15%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 25 95% 53%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(10 80% 50%));
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%), hsl(30 30% 98%));
+    --gradient-background: linear-gradient(to bottom, hsl(30 40% 98%), hsl(30 30% 96%));
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .dark {
+    --background: 20 20% 8%;
+    --foreground: 30 20% 95%;
+    
+    --card: 20 18% 12%;
+    --card-foreground: 30 20% 95%;
+    
+    --popover: 20 18% 12%;
+    --popover-foreground: 30 20% 95%;
+    
+    /* Primary: Bright orange for dark mode */
+    --primary: 25 95% 58%;
+    --primary-foreground: 20 20% 8%;
+    
+    /* Secondary: Lighter red for dark mode */
+    --secondary: 10 75% 55%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 20 15% 18%;
+    --muted-foreground: 30 15% 65%;
+    
+    --accent: 45 80% 25%;
+    --accent-foreground: 30 20% 95%;
+    
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 20 15% 20%;
+    --input: 20 15% 20%;
+    --ring: 25 95% 58%;
+    
+    --success: 142 70% 45%;
+    --warning: 38 90% 55%;
+    --info: 199 85% 55%;
+    
+    --chart-1: 25 95% 58%;
+    --chart-2: 142 70% 45%;
+    --chart-3: 10 75% 55%;
+    --chart-4: 45 90% 55%;
+    --chart-5: 280 65% 60%;
+    
+    --sidebar-background: 20 18% 10%;
+    --sidebar-foreground: 30 20% 95%;
+    --sidebar-primary: 25 95% 58%;
+    --sidebar-primary-foreground: 20 20% 8%;
+    --sidebar-accent: 20 15% 18%;
+    --sidebar-accent-foreground: 30 20% 95%;
+    --sidebar-border: 20 15% 20%;
+    --sidebar-ring: 25 95% 58%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 58%), hsl(10 75% 55%));
+    --gradient-card: linear-gradient(to bottom, hsl(20 18% 12%), hsl(20 15% 10%));
+    --gradient-background: linear-gradient(to bottom, hsl(20 20% 8%), hsl(20 18% 6%));
+    
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}

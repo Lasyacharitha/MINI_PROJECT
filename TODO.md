@@ -1,0 +1,61 @@
+# Task: Build SRIT Canteen Pre-order Web App
+
+## Plan
+- [x] Step 1: Setup Supabase and Database Schema
+  - [x] Initialize Supabase
+  - [x] Create database tables and relationships
+  - [x] Setup RLS policies
+  - [x] Create storage bucket for menu images
+  - [x] Create helper functions and triggers
+- [x] Step 2: Design System and Theme Configuration
+  - [x] Create food-themed color system in index.css
+  - [x] Update tailwind.config.js with custom tokens
+- [x] Step 3: Core Types and Database API
+  - [x] Define TypeScript types
+  - [x] Create Supabase client
+  - [x] Implement database API functions
+- [x] Step 4: Authentication System
+  - [x] Modify AuthContext for strict @srit.ac.in email validation
+  - [x] Update RouteGuard with proper routes
+  - [x] Create Login and Register pages
+- [x] Step 5: Layouts and Routing
+  - [x] Create MainLayout with header and footer
+  - [x] Create AdminLayout with sidebar
+  - [x] Setup routes configuration
+  - [x] Update App.tsx with routing
+- [x] Step 6: User-Facing Pages
+  - [x] Home page with featured items
+  - [x] Menu browsing with filters
+  - [x] Cart and Checkout
+  - [x] Order confirmation and history
+  - [x] Profile page
+- [x] Step 7: Admin Pages
+  - [x] Dashboard with analytics
+  - [x] Menu management
+  - [x] Order management
+  - [x] Inventory management
+  - [x] User management
+  - [x] Settings
+- [x] Step 8: Reusable Components
+  - [x] Menu item cards
+  - [x] Order cards and status badges
+  - [x] Cart items
+  - [x] Admin tables and forms
+- [x] Step 9: Utilities and Helpers
+  - [x] Email validator
+  - [x] Token generator
+  - [x] Date utilities
+- [x] Step 10: Testing and Validation
+  - [x] Run lint and fix issues
+  - [x] Verify all features
+
+## Notes
+- Using strict @srit.ac.in email validation with whitelist
+- Payment is simulated with one-time tokens
+- Orders only for current date with time slots
+- Cancellation policies: full refund before prep, 50% after
+- Multi-role system: student/staff, admin, kitchen staff, cashier
+- Session-wise menu management (breakfast, lunch, dinner)
+- QR code verification at pickup
+- All features implemented successfully
+- Lint passed with no errors
